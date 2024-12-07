@@ -99,3 +99,11 @@ Minimap2, seqtk, samtools, quast, and conda environment with installed CheckM2 s
  - Final_expanded_bins\\**Dataset_name**_core_contigs.. fasta files - final expanded core sets of contigs obtained with different settings.  
  - Final_expanded_bins\CheckM2\ - results of evaluation of the initial and expanded core sets of contigs by CheckM2.  
  - Final_expanded_bins\Quast\ - results of evaluation of the initial and expanded core sets of contigs by Quast.  
+ 
+### Scaffolding by longstitch
+
+Final expanded core sets of contigs can be additionally scaffolded with briging long reads. For this, we used [longstitch](https://github.com/bcgsc/LongStitch). 
+
+### Scoffolding using assembly graph
+
+ 
