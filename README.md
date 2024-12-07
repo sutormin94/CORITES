@@ -86,7 +86,7 @@ Minimap2, seqtk, samtools, quast, and conda environment with installed CheckM2 s
 
 **Output files:**
 
-**Dataset_name**_all_contigs.fasta - all metagenome contigs combined.
+**Dataset_name**_all_contigs.fasta - all metagenome contigs combined.\r\n
 **Dataset_name**_all_longreads.fastq - all long reads combined.
 **Dataset_name**_all_long_reads_vs_all_contigs.sam - alignment of all long reads to all metagenome contigs
 **Dataset_name**_all_long_reads_vs_all_contigs.coverage.tab - file with coverage depth of metagenome contigs upon alignment of long reads.
