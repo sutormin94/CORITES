@@ -34,5 +34,48 @@ If such ordering exists, the two contigs were merged, and the gap between them w
 
 ### Iterative expansion module
 
+```
+>python Main_pipeline.py --help
+usage: Main_pipeline.py [-h] -dn DATASET_NAME -bf BIN_FILES [BIN_FILES ...] [-af ASSEMBLY_FILES [ASSEMBLY_FILES ...]] [-rf LONG_READ_FILES [LONG_READ_FILES ...]] [-mm2 MINIMAP2] [-rn]
+                        -mqt MAPQ_THR -bst BRIDGE_STR_THR -mi MAX_ITERATIONS -rsm {seqtk,manual} -sp SEQTK_PATH -samtools SAMTOOLS_PATH -ChM2 CHECKM2_ENV -qst QUAST_PATH [-o OUTPUT]
+
+CORITES pipeline main script.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -dn DATASET_NAME, --dataset_name DATASET_NAME
+                        Dataset name.
+  -bf BIN_FILES [BIN_FILES ...], --bin_files BIN_FILES [BIN_FILES ...]
+                        List of files with contigs (fasta).
+  -af ASSEMBLY_FILES [ASSEMBLY_FILES ...], --assembly_files ASSEMBLY_FILES [ASSEMBLY_FILES ...]
+                        List of assemblies from which bins were derived (fasta).
+  -rf LONG_READ_FILES [LONG_READ_FILES ...], --long_read_files LONG_READ_FILES [LONG_READ_FILES ...]
+                        List of fastq files with long reads to be used for bridging and scaffolding (fastq).
+  -mm2 MINIMAP2, --minimap2 MINIMAP2
+                        Path to minimap2 read aligner executable.
+  -rn, --run_alignment  Run alignment of all long reads vs all contigs or not.
+  -mqt MAPQ_THR, --mapq_thr MAPQ_THR
+                        Mapq threshold to filter alignments.
+  -bst BRIDGE_STR_THR, --bridge_str_thr BRIDGE_STR_THR
+                        Contig-to-contig bridge strength threshold to filter contig links.
+  -mi MAX_ITERATIONS, --max_iterations MAX_ITERATIONS
+                        Maximal number of iterations to expand core contigs set.
+  -rsm {seqtk,manual}, --read_search_mode {seqtk,manual}
+                        Algorithm to use for retrival of reads sequences.
+  -sp SEQTK_PATH, --seqtk_path SEQTK_PATH
+                        Path to seqtk executable.
+  -samtools SAMTOOLS_PATH, --samtools_path SAMTOOLS_PATH
+                        Path to samtools executable.
+  -ChM2 CHECKM2_ENV, --CheckM2_env CHECKM2_ENV
+                        Conda environment with CheckM2 installed and avaliable in path.
+  -qst QUAST_PATH, --quast_path QUAST_PATH
+                        Path to quast executable.
+  -o OUTPUT, --output OUTPUT
+                        Path to output directory.
+```
+
+**Requitrements: **
+For the initial run, metagenomic bins (in fasta), full metagenome assembly(s) (in fasta), and long reads (in fastq) should be provided as well as the run_alignment option to generate the reads alignment.
+For further runs (e.g., when adjusting the mapq_thr, bridge_str_thr, and max_iterations paremeters), the run_alignment can be skipped.
 
 

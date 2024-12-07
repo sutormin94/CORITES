@@ -9,12 +9,12 @@ import os
 import subprocess
 import time
 
-parser=argparse.ArgumentParser(description="Main script for bin improvement pipeline.")
+parser=argparse.ArgumentParser(description="CORITES pipeline main script.")
 parser.add_argument("-dn", "--dataset_name", required=True, help="Dataset name.")
-parser.add_argument("-bf", "--bin_files", required=True, nargs='+', help="List of files with contigs.")
-parser.add_argument("-af", "--assembly_files", nargs='+', help="List of assemblies from which bins were derived.")
-parser.add_argument("-rf", "--long_read_files", nargs='+', help="List of fastq files with long reads to be used for bridging and scaffolding.")
-parser.add_argument("-mm2", "--minimap2", default="minimap2", help="Path to minimap2 read aligner.")
+parser.add_argument("-bf", "--bin_files", required=True, nargs='+', help="List of files with contigs (fasta).")
+parser.add_argument("-af", "--assembly_files", nargs='+', help="List of assemblies from which bins were derived (fasta).")
+parser.add_argument("-rf", "--long_read_files", nargs='+', help="List of fastq files with long reads to be used for bridging and scaffolding (fastq).")
+parser.add_argument("-mm2", "--minimap2", default="minimap2", help="Path to minimap2 read aligner executable.")
 parser.add_argument("-rn", "--run_alignment", action='store_true', help="Run alignment of all long reads vs all contigs or not.")
 parser.add_argument("-mqt", "--mapq_thr", required=True, help="Mapq threshold to filter alignments.")
 parser.add_argument("-bst", "--bridge_str_thr", required=True, help="Contig-to-contig bridge strength threshold to filter contig links.")
