@@ -6,7 +6,8 @@ The CORITES algorithm is developed for refinment of metagenomic bins.
 
 **Step 0:** Metagenome binning
 
-CORITES takes bins prepared by different binners and classified identically by (e.g., by GTDB) or sharing significant similarity. 
+CORITES takes bins prepared by different binners from the same metagenome which represent the same genome.
+E.g., these bins are classified identically (e.g., by GTDB) or sharing significant similarity.
 
 **Step 1:** Identification of a core set of contigs
 
