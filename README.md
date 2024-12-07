@@ -1,10 +1,10 @@
 # CORITES
  Core contigs iterative expansion and scaffolding pipeline
  
-## Descreption 
+## Description 
 The CORITES algorithm is developed for refinment of metagenomic bins. 
 
-**Step 0:** Generation metagenome binning
+**Step 0:** Metagenome binning
 
 CORITES takes bins prepared by different binners and classified identically by (e.g., by GTDB) or sharing significant similarity. 
 
