@@ -88,14 +88,14 @@ Minimap2, seqtk, samtools, quast, and conda environment with installed CheckM2 s
 
 **Dataset_name**_all_contigs.fasta - all metagenome contigs combined.  
 **Dataset_name**_all_longreads.fastq - all long reads combined.  
-**Dataset_name**_all_long_reads_vs_all_contigs.sam - alignment of all long reads to all metagenome contigs
-**Dataset_name**_all_long_reads_vs_all_contigs.coverage.tab - file with coverage depth of metagenome contigs upon alignment of long reads.
-**Dataset_name**_initial_core_contigs.fasta - initial core set of contigs (shared between initial metagenomic bins provided).
-Expand_contigs_core\\**Dataset_name**_core_contigs_bs_distribution.png - histogram of the bridge strength values (numbers of bridging long reads) identified for the initial core set of contigs. 90% percentile for core contigs bridge strength is indicated with vertical dashed line. Useful for adjusting the bridge_strength_thr parametr.
-Expand_contigs_core\\**Dataset_name**_core_contigs_coverage_depth_distribution.png - histogram of coverage depth (based on alignment of long reads) for the initial core set of contigs. Mean value is indicated with vertical dashed line. Useful for adjusting the bridge_strength_thr parametr.
-Expand_contigs_core\Briges_info.. tab files - information about the bridging of contigs with long reads, for each iteration of expansion.
-Expand_contigs_core\Briging_reads.. fastq files - briging long reads, for each iteration of expansion.
-Expand_contigs_core\Expanded_core_contigs.. fasta files - expanded set of core contigs, for each iteration of expansion.
-Final_expanded_bins\\**Dataset_name**_core_contigs.. fasta files - final expanded core sets of contigs obtained with different settings.
-Final_expanded_bins\CheckM2\ - results of evaluation of the initial and expanded core sets of contigs by CheckM2.
-Final_expanded_bins\Quast\ - results of evaluation of the initial and expanded core sets of contigs by Quast.
+**Dataset_name**_all_long_reads_vs_all_contigs.sam - alignment of all long reads to all metagenome contigs.  
+**Dataset_name**_all_long_reads_vs_all_contigs.coverage.tab - file with coverage depth of metagenome contigs upon alignment of long reads.  
+**Dataset_name**_initial_core_contigs.fasta - initial core set of contigs (shared between initial metagenomic bins provided).  
+Expand_contigs_core\\**Dataset_name**_core_contigs_bs_distribution.png - histogram of the bridge strength values (numbers of bridging long reads) identified for the initial core set of contigs. 90% percentile for core contigs bridge strength is indicated with vertical dashed line. Useful for adjusting the bridge_strength_thr parametr.  
+Expand_contigs_core\\**Dataset_name**_core_contigs_coverage_depth_distribution.png - histogram of coverage depth (based on alignment of long reads) for the initial core set of contigs. Mean value is indicated with vertical dashed line. Useful for adjusting the bridge_strength_thr parametr.  
+Expand_contigs_core\Briges_info.. tab files - information about the bridging of contigs with long reads, for each iteration of expansion.  
+Expand_contigs_core\Briging_reads.. fastq files - briging long reads, for each iteration of expansion.  
+Expand_contigs_core\Expanded_core_contigs.. fasta files - expanded set of core contigs, for each iteration of expansion.  
+Final_expanded_bins\\**Dataset_name**_core_contigs.. fasta files - final expanded core sets of contigs obtained with different settings.  
+Final_expanded_bins\CheckM2\ - results of evaluation of the initial and expanded core sets of contigs by CheckM2.  
+Final_expanded_bins\Quast\ - results of evaluation of the initial and expanded core sets of contigs by Quast.  
