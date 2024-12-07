@@ -1,6 +1,6 @@
 ###############################################
-##Anastasiia Rusanova, Dmitry Sutormin, 2023##
-### Pipeline wrapper script: identifies core contigs and expand the core using information from long reads.
+##Anastasiia Rusanova, Dmitry Sutormin, 2024##
+### CORITES pipeline wrapper script: identifies core contigs and expand the core using information from long reads.
 ############
 
 import sys
@@ -59,7 +59,7 @@ logfile.write(f'[{current_time}] Core contigs set expansion pipeline started.\n'
 current_script_directory=os.path.dirname(os.path.abspath(sys.argv[0]))
 
 
-# Get core contigs.
+# Gets core contigs.
 c_time=time.localtime()
 current_time=time.strftime("%H:%M:%S", c_time)
 print(f'[{current_time}] Construction of core contigs set started.', file=sys.stdout)
@@ -91,7 +91,7 @@ print(f'[{current_time}] Construction of core contigs set finished.', file=sys.s
 logfile.write(f'[{current_time}] Construction of core contigs set finished.\n')
 
 
-# Prepare universal alignment. Concatenate fasta files together and fastq files together, then align with minimap2.
+# Prepares universal alignment. Concatenates fasta files together and fastq files together, then aligns with minimap2.
 c_time=time.localtime()
 current_time=time.strftime("%H:%M:%S", c_time)
 print(f'[{current_time}] Merging of metagenomic assemblies and long read dataset started.', file=sys.stdout)
@@ -186,7 +186,7 @@ if 'run_universal_alignment' in locals():
     logfile.write(f'[{current_time}] Alignment of merged long reads to merged assemblies finished.\n')    
 
     
-# Iteratively expand core contigs set using long read alignment.
+# Iteratively expands core contigs set using long read alignment.
 c_time=time.localtime()
 current_time=time.strftime("%H:%M:%S", c_time)
 print(f'[{current_time}] Iterative expansion of a core set of contigs started.', file=sys.stdout)
@@ -209,7 +209,7 @@ print(f'[{current_time}] Iterative expansion of a core set of contigs finished.'
 logfile.write(f'[{current_time}] Iterative expansion of a core set of contigs finished.\n')
 
 
-# Get sequences for expanded core contigs & sequences of bridging reads.
+# Gets sequences for expanded core contigs & sequences of bridging reads.
 c_time=time.localtime()
 current_time=time.strftime("%H:%M:%S", c_time)
 print(f'[{current_time}] Retrival of contigs and reads sequences for the expanded core contigs set started.', file=sys.stdout)
@@ -236,7 +236,7 @@ print(f'[{current_time}] Retrival of contigs and reads sequences for the expande
 logfile.write(f'[{current_time}] Retrival of contigs and reads sequences for the expanded core contigs set finished.\n')
 
 
-# Split expanded contigs sets by original assemblies.
+# Splits expanded contigs sets by original assemblies.
 c_time=time.localtime()
 current_time=time.strftime("%H:%M:%S", c_time)
 print(f'[{current_time}] Splitting of expanded core contigs set by original assemblies started.', file=sys.stdout)
@@ -259,7 +259,7 @@ print(f'[{current_time}] Splitting of expanded core contigs set by original asse
 logfile.write(f'[{current_time}] Splitting of expanded core contigs set by original assemblies finished.\n')
 
 
-# Run checkM for assessment of contig sets - original and expanded.
+# Runs checkM for assessment of contig sets - original and expanded.
 c_time=time.localtime()
 current_time=time.strftime("%H:%M:%S", c_time)
 print(f'[{current_time}] Assessment of core contigs sets quality by CheckM started.', file=sys.stdout)
@@ -276,7 +276,7 @@ print(f'[{current_time}] Assessment of core contigs sets quality by CheckM finis
 logfile.write(f'[{current_time}] Assessment of core contigs sets quality by CheckM finished.\n')
 
 
-# Run quast for assessment of contig sets - original and expanded.
+# Runs quast for assessment of contig sets - original and expanded.
 c_time=time.localtime()
 current_time=time.strftime("%H:%M:%S", c_time)
 print(f'[{current_time}] Assessment of core contigs sets quality by Quast started.', file=sys.stdout)
