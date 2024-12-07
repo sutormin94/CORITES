@@ -75,6 +75,7 @@ optional arguments:
 ```
 
 **Requitrements: **
+
 For the initial run, metagenomic bins (in fasta), full metagenome assembly(s) (in fasta), and long reads (in fastq) should be provided as well as the run_alignment option to generate the reads alignment.
 For further runs (e.g., when adjusting the mapq_thr, bridge_str_thr, and max_iterations paremeters), the run_alignment can be skipped.
 
