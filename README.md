@@ -104,6 +104,16 @@ Minimap2, seqtk, samtools, quast, and conda environment with installed CheckM2 s
 
 Final expanded core sets of contigs can be additionally scaffolded with briging long reads. For this, we used [longstitch](https://github.com/bcgsc/LongStitch). 
 
-### Scoffolding using assembly graph
+### Scaffolding Using Assembly Graph
 
- 
+We have extended the SPAdes assembler to support scaffolding using the assembly graph. A statically built version of the software has been prepared for ease of use. To get started, follow these steps:
+
+1. Extract the provided archive.
+2. Run the command below:
+
+
+```bash
+spades.py --meta -1 <left-short-reads> -2 <right-short-reads> —trusted-contigs <path_to_bin_to_refine> -o <output_dir>
+```
+
+The refined sequences for the bin will be saved in a FASTA file named refined_bin.fasta, located in the K<max> folder of the output directory.
